@@ -50,7 +50,7 @@ app.post("/dialogflow-gptj", express.json(), (req, res) => {
         // console.log('botResponse: ', botResponse[0].generated_text.substring(botResponse[0].generated_text.indexOf(':') + 1).trim())
         console.log('botResponse: ', botResponse)
         // agent.add(botResponse[0].generated_text.substring(botResponse[0].generated_text.indexOf(':') + 1).trim());
-        agent.add(botResponse[0].text.trim());
+        agent.add(botResponse[0].generated_text.trim());
       } catch (err) {
         console.log('This is error:', err);
         agent.add('Sorry. Something went wrong. Can you say that again?');
