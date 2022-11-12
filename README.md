@@ -24,7 +24,7 @@ npm install
 
 5) Run the API:
 ```
-node dialogflowgpt3.js
+node dialogflowgptj.js
 ```
 
 6) Use ngrok to make localhost public
