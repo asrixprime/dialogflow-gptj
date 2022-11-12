@@ -9,12 +9,12 @@ conda create -n nodejs-env nodejs
 
 2) Clone the following repo with all the dependencies:
 ```
-git clone https://github.com/abuelgasimsaadeldin/dialogflow-gpt3.git  
+git clone https://github.com/abuelgasimsaadeldin/dialogflow-gptj.git  
 ```
 
 3) Create .env file and place following: 
 ```
-OPENAI_API_KEY=""
+API_TOKEN=""
 ```
 
 4) Install the dependencies:

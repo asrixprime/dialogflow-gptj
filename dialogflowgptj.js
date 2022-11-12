@@ -27,15 +27,15 @@ app.post("/dialogflow", express.json(), (req, res) => {
         headers: { Authorization: `Bearer ${process.env.API_TOKEN}` },
       });
     
-      const dialog = [
-        `The following is a conversation with an AI assistant that can have meaningful conversations with users. The assistant is helpful, empathic, and friendly. Its objective is to make the user feel better by feeling heard. With each response, the AI assisstant prompts the user to continue the conversation in a natural way.
+      // const dialog = [
+      //   `The following is a conversation with an AI assistant that can have meaningful conversations with users. The assistant is helpful, empathic, and friendly. Its objective is to make the user feel better by feeling heard. With each response, the AI assisstant prompts the user to continue the conversation in a natural way.
 
-        AI: Hello, my name is Debra. I am your personal AI assistant from Orient Telecoms. How are you doing today?`,
-      ];
+      //   AI: Hello, my name is Debra. I am your personal AI assistant from Orient Telecoms. How are you doing today?`,
+      // ];
       let query = agent.query;
       console.log('querytext ', query)
-      dialog.push(`User: ${query}`);
-      dialog.push('AI:');
+      // dialog.push(`User: ${query}`);
+      // dialog.push('AI:');
 
       try {
         const response = await fetch(
@@ -47,8 +47,8 @@ app.post("/dialogflow", express.json(), (req, res) => {
         }
       );
         const botResponse = await response.json();
-        console.log('botResponse: ', botResponse[0].generated_text.substring(botResponse[0].generated_text.indexOf(':') + 1).trim())
-        // console.log('botResponse: ', botResponse)
+        // console.log('botResponse: ', botResponse[0].generated_text.substring(botResponse[0].generated_text.indexOf(':') + 1).trim())
+        console.log('botResponse: ', botResponse)
         agent.add(botResponse[0].generated_text.substring(botResponse[0].generated_text.indexOf(':') + 1).trim());
       } catch (err) {
         console.log('This is error:', err);
