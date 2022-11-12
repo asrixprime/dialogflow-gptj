@@ -33,7 +33,7 @@ app.post("/dialogflow", express.json(), (req, res) => {
       //   AI: Hello, my name is GPT-J. I am your personal AI assistant from Orient Telecoms. How are you doing today?`,
       // ];
       let query = agent.query;
-      console.log('querytext ', query)
+      console.log('querytext ', query) 
       // dialog.push(`User: ${query}`);
       // dialog.push('AI:');
 
