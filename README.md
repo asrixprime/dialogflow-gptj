@@ -1,5 +1,5 @@
-# dialogflow and GPT3 Integration
-API written using nodejs for GPT3 connection with Dialogflow.
+# dialogflow and GPTJ Integration
+API written using nodejs for GPTJ connection with Dialogflow.
 
 ## Steps to install on Windows:
 1) If using anaconda use following command to install nodje and npm in ve
