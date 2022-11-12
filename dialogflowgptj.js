@@ -18,7 +18,7 @@ app.post("/dialogflow", express.json(), (req, res) => {
     agent.handleRequest(intentMap);
   
     function welcome(agent) {
-      agent.add('Hi, I am Debra! I am your virtual personal assistant from Orient Telecoms. How are you doing today?');
+      agent.add('Hi, I am GPT-J! I am your virtual personal assistant from Orient Telecoms. How are you doing today?');
   }
   
   async function defaultFallback(agent) {
@@ -30,7 +30,7 @@ app.post("/dialogflow", express.json(), (req, res) => {
       // const dialog = [
       //   `The following is a conversation with an AI assistant that can have meaningful conversations with users. The assistant is helpful, empathic, and friendly. Its objective is to make the user feel better by feeling heard. With each response, the AI assisstant prompts the user to continue the conversation in a natural way.
 
-      //   AI: Hello, my name is Debra. I am your personal AI assistant from Orient Telecoms. How are you doing today?`,
+      //   AI: Hello, my name is GPT-J. I am your personal AI assistant from Orient Telecoms. How are you doing today?`,
       // ];
       let query = agent.query;
       console.log('querytext ', query)
