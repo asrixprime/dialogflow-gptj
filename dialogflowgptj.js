@@ -10,7 +10,7 @@ app.get('/', (req,res) => {
   res.send('Welcome to Dialogflow-GPTJ Application!!');
 })
 
-app.post("/dialogflow", express.json(), (req, res) => {
+app.post("/dialogflow-gptj", express.json(), (req, res) => {
     const agent = new WebhookClient({ request: req, response: res });
     let intentMap = new Map();
     intentMap.set("Default Welcome Intent", welcome);
